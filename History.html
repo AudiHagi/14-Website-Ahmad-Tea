@@ -1,0 +1,359 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="dist/css/jquery.fancybox.min.css">
+
+    <!-- Roboto dan Poppin 500 weight font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/b4d146c312.js" crossorigin="anonymous"></script>
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/jquery.fancybox.min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+
+    <title>History</title>
+
+    <style>
+        body {
+            background-image: url("img/back1.jpg");
+            font-family: 'Bookman Old Style';
+            border: 0px solid black;
+        }
+
+        /* navbar */
+        nav.navbar {
+            font-family: 'Poppins', sans-serif;
+            font-size: 130%;
+            margin: 0;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        nav.navbar button.navbar-toggler:active {
+            background-color: #648b19;
+        }
+
+        nav.navbar a {
+            color: #648b19;
+        }
+
+        nav.navbar {
+            background: white;
+            padding: 15px;
+        }
+
+        nav.navbar li {
+            margin: 10px 30px 10px 30px;
+        }
+
+        nav.navbar ul li a.dropdown-item:hover,
+        nav.navbar ul li a.dropdown-item:focus {
+            border-radius: 10px;
+        }
+
+        nav.navbar ul li a.dropdown-item:active {
+            background-color: rgba(132, 197, 35, 0.686);
+            border-radius: 10px;
+        }
+
+        nav.navbar .nav-link.active,
+        nav.navbar .nav-link:hover {
+            border-bottom: 4px solid #648b19;
+        }
+
+        /* konten */
+        .container-lg {
+            background-color: rgb(3, 51, 20, 0.5);
+        }
+
+        h6 {
+            color: green;
+            font-family: "Bookman Old Style";
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+            transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+        }
+
+        h4.card-title {
+            color: black;
+            font-family: "Bookman Old Style";
+            text-align: left;
+        }
+
+        .scroll {
+            color: #fff;
+            margin-top: 100px
+        }
+
+        #toTopBtn {
+            position: fixed;
+            bottom: 26px;
+            right: 39px;
+            z-index: 98;
+            padding: 21px;
+            background-color: black;
+        }
+
+        .js .cd-top--fade-out {
+            opacity: .5
+        }
+
+        .js .cd-top--is-visible {
+            visibility: visible;
+            opacity: 1
+        }
+
+        .js .cd-top {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s, visibility .3s, background-color .3s
+        }
+
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            bottom: var(--cd-back-to-top-margin);
+            right: 20px;
+            right: var(--cd-back-to-top-margin);
+            display: inline-block;
+            height: 40px;
+            height: var(--cd-back-to-top-size);
+            width: 40px;
+            width: var(--cd-back-to-top-size);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+            background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+            background-color: black;
+            background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+        }
+
+        .height {
+            height: 3000px
+        }
+
+        #footer {
+            height: 70px;
+            text-align: center;
+            box-shadow: 4px 0px 2px -2px gray;
+            background-color: white;
+            /* padding: 0px 0 0px 0; */
+        }
+    </style>
+    <script>
+        $("document").ready(function() {
+            $("#content a:not(#toTopBtn)").fancybox();
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Source code navbar diambil dari dokumentasi resmi bootstrap dengan modifikasi -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Home.html"><img src="img/Ahmad_Tea_logo.png" style="width: 100px"></a>
+            <!--Logo picture-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="History.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product.html">Product</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ContactInfo.html">Contact Info</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Contact Form.html">Contact Form</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
+    <!-- navbar -->
+
+    <!-- content -->
+    <!--CONTENT START-->
+    <div class="container-lg" id="content">
+
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center py-4">
+                <h2 class="another" style="color: white; text-decoration: underline;">HISTORY</h2>
+            </div>
+        </div>
+
+        <div class="container content">
+
+            <!--Video Start-->
+            <div class="container bcontent py-4">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/pVwKuATd4U4" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Video End-->
+
+            <!--HISTORY START-->
+            <div class="container bcontent py-4">
+                <div class="card text-justify" style="border-radius: 2em; height: 310;">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <a target="_blank" href="img/Mr Rahim Afshar.jpg">
+                                <div class="image">
+                                    <img class="card-img-top" src="img/Mr Rahim Afshar.jpg"
+                                        alt="Mr. Rahim Afsar - Ahmad Tead Chairman" width="500px" height="308px"
+                                        style="border-radius: 2em;">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h6>The Ahmad Tea Story</h6>
+                                <h4 class="card-title">COMPANY STORY</h4>
+                                <p align="justify">In 1979, company founder, Mr Rahim Afshar decides to enter the tea
+                                    trade, building
+                                    upon his family's history
+                                    and knowledge in packing and blending tea. He is inspired by a dream experienced by
+                                    family friend and
+                                    mentor, Professor A.H.
+                                    Ganjavian.</p>
+                                <p align="justify">21 Years later, in 2000 by the turn of the Millennium Ahmad Tea is
+                                    one of the top 5
+                                    leading tea brands across Russia,
+                                    Ukraine and the Middle East. This is driven by first rate quality control from the
+                                    Tea Tasting
+                                    Department, headed by William
+                                    Manning.</p>
+                                <p align="justify">After that in 2019, Ahmad Tea picks up more Great Taste Awards,
+                                    taking the company’s
+                                    awards tally to a
+                                    total of 22 since first entering in 2015.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--HISTORY END-->
+
+            <!--VISI START-->
+            <div class="container bcontent py-4">
+                <div class="card" style="border-radius: 2em; margin-right: auto;">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5">
+                            <a target="_blank" href="img/Tea Drinkers.jpg">
+                                <div class="image">
+                                    <img class="card-img-top" src="img/Tea Drinkers.jpg" alt="Tea Drinkers"
+                                        width="550px" height="310px" style="border-radius: 2em;">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h6>Our Purpose</h6>
+                                <h4 class="card-title">COMPANY VISION</h4>
+                                <p align="justify">We inspire tea drinkers with our passion and commitment to quality.
+                                    We honour the
+                                    role played by a cup of
+                                    Ahmad Tea, from everyday moments of quiet reflection to times of joyous celebration
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--VISI END-->
+
+            <!--MISI START-->
+            <div class="container bcontent py-4">
+                <div class="card" style="border-radius: 2em;">
+                    <div class="row no-gutters">
+                        <div class="col-sm-5">
+                            <a target="_blank" href="img/Ahmad Tea Factory.jpg.jpg">
+                                <div class="image">
+                                    <img class="card-img-top" src="img/Ahmad Tea Factory.jpg" alt="Ahmad Tea Factory"
+                                        width="500px" height="320px" style="border-radius: 2em;">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h6>Our Action</h6>
+                                <h4 class="card-title">COMPANY MISSION</h4>
+                                <p align="justify">At Ahmad Tea we are guided by a fervent belief in our responsibility
+                                    to give
+                                    unconditionally, with
+                                    kindnessand respect. To fulfil that responsibility, we offer this kindness to people
+                                    and communities
+                                    all over the world. It
+                                    is our mission to act in such a way that we inspire kindness in others, too.</p>
+                                <p align="justify">Our task can never be truly complete, so we are constantly seeking
+                                    new ways for
+                                    compassion and ethical
+                                    values to be applied in our business practices so we can give back to those who need
+                                    it most. Our CSR
+                                    report for 2020 shows
+                                    the highlights of our community, sustainability and responsible sourcing work in
+                                    2020.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--MISI END-->
+        </div>
+
+        <!--BUTTON TO TOP-->
+        <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+            data-abc="true"></a>
+
+    </div>
+    <!--CONTENT END-->
+
+    <!--FOOTER START-->
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Kelompok 2<br />
+            <p class="text-dark">© 2022 Copyright</p> 
+        </div>
+    </footer>
+    <!--FOOTER END-->
+
+</body>
+</html>

@@ -1,0 +1,385 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <link rel="stylesheet" href="dist/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="dist/css/jquery.fancybox.min.css">
+
+    <!-- Roboto dan Poppin 500 weight font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap"
+        rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/b4d146c312.js" crossorigin="anonymous"></script>
+    <script src="dist/js/jquery.js"></script>
+    <script src="dist/js/jquery.fancybox.min.js"></script>
+    <script src="dist/js/bootstrap.js"></script>
+
+    <title>Home</title>
+
+    <script>
+        $("document").ready(function() {
+            $("#content a:not(#toTopBtn)").fancybox();
+        });
+
+    </script>
+
+    <style>
+        body {
+            background-image: url("img/back1.jpg");
+            font-family: 'Bookman Old Style';
+            border: 0px solid black;
+        }
+
+        /* navbar */
+        nav.navbar {
+            font-family: 'Poppins', sans-serif;
+            font-size: 130%;
+            margin: 0;
+            box-shadow: 0 4px 2px -2px gray;
+        }
+
+        nav.navbar button.navbar-toggler:active {
+            background-color: #648b19;
+        }
+
+        nav.navbar a {
+            color: #648b19;
+        }
+
+        nav.navbar {
+            background: white;
+            padding: 15px;
+        }
+
+        nav.navbar li {
+            margin: 10px 30px 10px 30px;
+        }
+
+        nav.navbar ul li a.dropdown-item:hover,
+        nav.navbar ul li a.dropdown-item:focus {
+            border-radius: 10px;
+        }
+
+        nav.navbar ul li a.dropdown-item:active {
+            background-color: rgba(132, 197, 35, 0.686);
+            border-radius: 10px;
+        }
+
+        nav.navbar .active,
+        nav.navbar .nav-link:hover {
+            border-bottom: 4px solid #648b19;
+        }
+
+        /* konten */
+        .container-lg {
+            background-color: rgb(3, 51, 20, 0.5);
+        }
+
+        h6 {
+            color: green;
+            font-family: "Bookman Old Style";
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+            transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+        }
+
+        h4.card-title {
+            color: black;
+            font-family: "Bookman Old Style";
+            text-align: left;
+        }
+
+        .scroll {
+            color: #fff;
+            margin-top: 100px
+        }
+
+        #toTopBtn {
+            position: fixed;
+            bottom: 26px;
+            right: 39px;
+            z-index: 98;
+            padding: 21px;
+            background-color: black;
+        }
+
+        .js .cd-top--fade-out {
+            opacity: .5
+        }
+
+        .js .cd-top--is-visible {
+            visibility: visible;
+            opacity: 1
+        }
+
+        .js .cd-top {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .3s, visibility .3s, background-color .3s
+        }
+
+        .cd-top {
+            position: fixed;
+            bottom: 20px;
+            bottom: var(--cd-back-to-top-margin);
+            right: 20px;
+            right: var(--cd-back-to-top-margin);
+            display: inline-block;
+            height: 40px;
+            height: var(--cd-back-to-top-size);
+            width: 40px;
+            width: var(--cd-back-to-top-size);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .05) !important;
+            background: url(https://res.cloudinary.com/dxfq3iotg/image/upload/v1571057658/cd-top-arrow.svg) no-repeat center 50%;
+            background-color: black;
+            background-color: hsla(var(--cd-color-3-h), var(--cd-color-3-s), var(--cd-color-3-l), 0.8)
+        }
+
+        .height {
+            height: 3000px
+        }
+
+        #content div.quote {
+            clear: both;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #content div.text-quote {
+            width: 635px;
+            height: 70px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            text-align: center;
+            margin: 0 auto;
+            background-image: linear-gradient(to top, #000, rgb(0,0,0,0.5));
+            position: relative;
+            bottom: 70px;
+            font-size: 16px;
+            color: rgb(226, 200, 200);
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Source code navbar diambil dari dokumentasi resmi bootstrap dengan modifikasi -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img src="img/Ahmad_Tea_logo.png" style="width: 100px"></a>
+            <!--Logo picture-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="History.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Product.html">Product</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Contact
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="ContactInfo.html">Contact Info</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="Contact Form.html">Contact Form</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> <!-- navbar -->
+
+    <!-- content -->
+    <!--CONTENT START-->
+    <div class="container-lg" id="content">
+
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center py-4">
+                <h2 class="another" style="color: white; text-decoration: underline;">HOME</h2>
+            </div>
+        </div>
+
+        <div class="container content">
+
+            <!--Video Start-->
+            <div class="container bcontent py-4">
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" width="560" height="315"
+                                src="https://www.youtube.com/embed/pVwKuATd4U4" title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Video End-->
+
+            <!--THE AHMAD TEA STORY-->
+            <div class="container bcontent py-4">
+                <div class="card text-justify" style="border-radius: 2em; height: 330;">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <a target="_blank" href="img/tea artistry.jpg">
+                                <div class="image">
+                                    <img class="card-img-top" src="img/tea artistry.jpg"
+                                        alt="Mr. Rahim Afsar - Ahmad Tead Chairman" width="500px" height="328px"
+                                        style="border-radius: 2em;">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h6>THE AHMAD TEA STORY</h6>
+                                <h4 class="card-title">A FAMILY COMPANY BUILT ON VALUESY</h4>
+                                <p align="justify">We are a family company founded and run on family values. 
+                                    That means consistently working together year after year, never compromising 
+                                    on our beliefs and always being guided by our shared goals. We only work with 
+                                    the finest tea gardens around the world and we view our tea growers as a 
+                                    natural extension of the Ahmad Tea family. Every blend is sampled seven times 
+                                    during the journey from being plucked to your cup – a process overseen by our 
+                                    Chairman, Mr Rahim Afshar, and his team of world-leading Tea Masters. Nothing 
+                                    leaves our tasting room until we are sure it is an extraordinary cup of tea, 
+                                    destined to inspire tea lovers everywhere.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--THE AHMAD TEA STORY-->
+
+            <!-- OUR FACILITES -->
+            <div class="container bcontent py-4">
+                <div class="card text-justify" style="border-radius: 2em; height: 330;">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <a target="_blank" href="img/factory.jpg">
+                                <div class="image">
+                                    <img class="card-img-top" src="img/factory.jpg"
+                                        alt="Mr. Rahim Afsar - Ahmad Tead Chairman" width="500px" height="328px"
+                                        style="border-radius: 2em;">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h6>OUR FACILITES</h6>
+                                <h4 class="card-title">PRODUCING PERFECT TEA BLENDS AROUND THE WORLD</h4>
+                                <p align="justify">Our flagship site in Ras Al Khaimah, United Arab Emirates, is Ahmad Tea’s 
+                                    global production facility, and our pinnacle of best in class production principles and 
+                                    practices. Opened in 2012, the facility supplies bulk blended teas to other Ahmad Tea factories 
+                                    around the world and annual production exceeds 14 million kg of tea. Bulk packing production is 
+                                    fully automated, and with high speed dispatch we are able to produce a peak output of 180 
+                                    containers per month, which is a blending capacity of 100,000kg. There is on-site accommodation 
+                                    for over 250 people to support our valued workforce.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- OUR FACILITES -->
+
+            <!-- GREAT TASTE AWARD WINNERS -->
+            <div class="container bcontent py-4">
+                <div class="card text-justify" style="border-radius: 2em; height: 330;">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <a target="_blank" href="img/story_award_winning.png">
+                                <div class="image">
+                                    <img class="card-img-top" src="img/story_award_winning.png"
+                                        alt="Mr. Rahim Afsar - Ahmad Tead Chairman" width="500px" height="328px"
+                                        style="border-radius: 2em;">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-7">
+                            <div class="card-body">
+                                <h6>GREAT TASTE AWARD WINNERS</h6>
+                                <h4 class="card-title">AWARD-WINNING TEA</h4>
+                                <p align="justify">Our intent is to create blends that deliver a magical 
+                                    cup of tea. When that blend wins a much-revered Great Taste Award, 
+                                    there is no one more proud than us. Founded in 1994 and run by the 
+                                    Guild of Fine Food, the awards are the gold standard for the finest 
+                                    food and drink around the world. Since 2015, a number of our tea blends 
+                                    have been selected for awards and in 2018, we were given the distinguished 
+                                    honour of being named a Great Taste Producer. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- GREAT TASTE AWARD WINNERS -->
+
+            <!-- MR. RAHIM AFSHAR -->
+            <div class="container bcontent py-4">
+                <div class="card text-justify" style="border-radius: 2em; height: 500px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="quote">
+                                <div class="line"></div>
+                                <div class="zoom-in">
+                                    <a href="img/rahim-afshar.jpg"><img src="img/rahim-afshar.jpg" alt="Rahim Afshar" /></a>
+                                </div>
+                                <div class="text-quote">
+                                    “I will not sell anything that I would not drink at home.”
+                                    <br />
+                                    - M.R Rahim Afshar
+                                </div>
+                            </div>
+
+                            <p style="padding: 0 70px 0 70px; text-align: center; position: relative; bottom: 30px">
+                                This refusal to accept anything but the finest teas – primarily in terms of their flavour, aroma, 
+                                strength and consistency continues to guide our tasters and inspire our entire company.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- MR. RAHIM AFSHAR -->
+        </div>
+
+        <!--BUTTON TO TOP-->
+        <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out"
+            data-abc="true"></a>
+
+    </div>
+    <!--CONTENT END-->
+
+
+    <footer class="bg-light text-center text-lg-start">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Kelompok 2<br />
+            <p class="text-dark">© 2022 Copyright</p> 
+        </div>
+    </footer>
+</body>
+
+</html>
